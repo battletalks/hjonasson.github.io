@@ -1,0 +1,13 @@
+body {
+	width:90%;
+}
+
+/*
+Header styling
+*/
+
+#profile-photo {
+	width: 20%;
+	height: 20%;
+	/*float:right;*/
+}
