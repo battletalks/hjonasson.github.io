@@ -1,13 +1,115 @@
 body {
-	width:90%;
+	background-color: #F2BB33;
+	font-family: 'Playfair Display SC', serif;
+	color: #53A4A6;
 }
 
 /*
 Header styling
 */
 
-#profile-photo {
-	width: 20%;
-	height: 20%;
-	/*float:right;*/
+header {
+	position: relative;
 }
+
+/*
+Navigation bar
+*/
+
+
+ul { 
+	list-style-type:none;
+	margin:0; 
+	padding:0; 
+	overflow:hidden;
+	width: 100%
+}
+
+li { 
+	float:left;
+	width: 33%;
+} 
+a:link,
+a:visited { 
+	font-family: 'Playfair Display SC', serif;
+	font-size: 100%;
+	display:block; 
+	font-weight:bold; 
+	color:#F2BB33; 
+	background-color:#53A4A6; 
+	text-align:center; 
+	padding:4px; 
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+a:hover {
+	background-color: #7A0807;
+	font-size: 105%;
+}
+
+/*
+Media queries
+*/
+
+@media screen and (max-width: 768px) {
+	#header {
+		display: none;
+	}
+	#profile-photo {
+		display: none;
+	}
+
+	#mobile-header {
+		width: 100%;
+		height: auto;
+	}
+
+	li {
+		display: inline;
+		float: none;
+	}
+
+}
+
+@media screen and (min-width: 768.00001px) {
+	#mobile-header {
+		display:none;
+	}
+
+	#header {
+		height: auto;
+		width: 82.8%;
+		border-radius: 10px;
+	}
+
+	#profile-photo {
+		height: 98.5%;
+		width: auto;
+		border-radius: 0 10px 10px 0;
+		position: absolute;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
