@@ -34,8 +34,8 @@ li {
 	float:left;
 	width: 33.3333%;
 } 
-a:link,
-a:visited { 
+li a:link,
+li a:visited { 
 	font-family: 'Playfair Display SC', serif;
 	font-size: 100%;
 	display:block; 
@@ -48,8 +48,12 @@ a:visited {
 	text-transform:uppercase;
 }
 
+a {
+	text-decoration: none;
+}
 
-a:hover {
+
+li a:hover {
 	background-color: #7A0807;
 	font-size: 105%;
 }
@@ -103,6 +107,41 @@ p {
 	width: auto;
 	text-align: center;
 	border-radius: 20px;
+	padding: 20px 20px 20px 20px;
+}
+
+.education {
+
+	margin-left: 20%;
+	margin-right: 20%;
+	padding: 5px;
+}
+
+.year {
+	font-size: 5em;
+	display: block;
+}
+
+.hat {
+	display: block;
+	width: 10%;
+	margin: 0 auto;
+	background-color: #220186;
+}
+
+.edu-desc {
+	display: block;
+	float: right;
+
+}
+
+.graph {
+	max-width: 600px;
+	width: 70%;
+	min-width: 300px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
 }
 
 /*
