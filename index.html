@@ -1,53 +1,37 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,900' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!--<link rel="stylesheet" type="text/css" href="http://hjonasson.github.io/css/style.css">-->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!--<link rel="stylesheet" type="text/css" href="http://hjonasson.github.io/css/style.css">-->
-		<title>Hjörtur Jónasson</title>
-	</head>
-	<body>
-		<header>
-			<img id='header' src="images/white-header-small-background.png">
-			<!--<img id='profile-photo' src="images/profile.jpg">-->
-			<img id='mobile-header' src="images/white-header-background.png">
-		</header>
-		<nav>	
-			<ul id='nav-bar'>
-				<li><a href="index.html">About</a></li>
-				<li><a href="#projects">Projects</a>
-					<ul>
-						<li><a href="#project1">Project 1</a></li>
-						<li><a href="#project2">Project 2</a></li>
-						<li><a href="#project3">Project 3</a></li>
-					</ul>
-				</li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-		<div id='content'>
-			<p>Hi,</p>
-			<br>
-			<p>My name is Hjörtur. This is my page. To make it I used Canva, Subtlepatterns and many tips from Stackoverflow. I am currently residing in Sydney, Australia.</p>
-			<img id='profile-photo' src="images/profile.jpg">
-			<br>
-			<div class='education'>
-				<img class='hat' src="images/grad_hat.png">
-				<div class='year'>'13</div>
-				<div class='edu-desc'><p>I studied in the <a href="http://www.kaust.edu.sa">King Abdullah University of Science and Technology</a> for a master's degree in applied mathematics.
-				</div>
-			</div>
-			<div class='education'>
-				<img class='hat' src="images/grad_hat.png">
-				<div class='year'>'12</div>
-				<div class='edu-desc'><p>I studied in the <a href="http://www.english.hi.is">University of Iceland</a> and <a href="http://www.polimi.it/en/">Politecnico di Milano</a> for a Bsc in chemical engineering.</p>
-				</div>
-				<img class='graph' src="images/languages.png">
-				<img class='graph' src="images/programming.png">
-			</div>
-		</div>
-	</body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

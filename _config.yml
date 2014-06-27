@@ -1,0 +1,18 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Hjörtur Jónasson
+tagline:          'A Jekyll theme'
+description:      'A personal page made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a>'
+url:              http://hyde.getpoole.com
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
